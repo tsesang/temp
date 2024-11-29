@@ -1,8 +1,12 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { Head } from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 import { Button } from "@/components/ui/button";
 
 export default function Dashboard() {
+    const { data, setData, get } = useForm({
+        hello: "",
+    });
+
     return (
         <AuthenticatedLayout
             header={
